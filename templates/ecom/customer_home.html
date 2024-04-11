@@ -1,0 +1,105 @@
+{% extends 'ecom/customer_base.html' %}
+{% load static %}
+{% block content %}
+
+<style media="screen">
+    body, html {
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+
+    .page-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7f7f7;
+    }
+
+    .el-wrapper {
+        width: 300px;
+        margin: 15px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .product-image:hover {
+        transform: scale(1.05);
+    }
+
+    .product-details {
+        padding: 15px;
+    }
+
+    .product-name {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .product-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 16px;
+        color: #f39c12;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+        display: block;
+        text-align: center;
+        background-color: #f39c12;
+        color: #fff;
+        padding: 10px 0;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .add-to-cart:hover {
+        background-color: #e67e22;
+    }
+</style>
+
+{% if products %}
+<div class="row">
+    {% for p in products %}
+    <div class="el-wrapper">
+        <div class="product-image">
+            <img src="{% static p.product_image.url %}" alt="product pic" height="200" width="300">
+        </div>
+        <div class="product-details">
+            <div class="product-name">{{ p.name }}</div>
+            <div class="product-description">{{ p.description }}</div>
+            <div class="product-price">$ {{ p.price }}</div>
+            <a href="{% url 'add-to-cart' p.id %}" class="add-to-cart">Add to Cart</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<h3 style="text-align:center; color:yellow;">No Results Found</h3>
+{% endif %}
+
+<script>
+    {% if messages %}
+    {% for message in messages %}
+    alert('{{ message }}');
+    {% endfor %}
+    {% endif %}
+</script>
+
+{% endblock content %}
