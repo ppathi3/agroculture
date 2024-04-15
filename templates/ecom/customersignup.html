@@ -13,8 +13,11 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0)
+    background-image: url("static/images/loginbackground.png");
+    background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 .box {
     width: 500px;
@@ -22,7 +25,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background: #191919;
     ;
     text-align: center;
     transition: 0.25s;
@@ -46,7 +48,7 @@
 }
 
 .box h1 {
-    color: white;
+    color: Black;
     text-transform: uppercase;
     font-weight: 500
 }
@@ -154,7 +156,7 @@ a.socialIcon:hover,
                 <form class="box" method="post" enctype="multipart/form-data">
                   {% csrf_token %}
                     <h1>CUSTOMER SIGNUP</h1>
-                    <p class="text-muted"> Please enter your details to create account !</p>
+                    <p >Please enter your details to create account ! </p>
                       {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
                         {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
                           {% render_field userForm.username class="form-control" placeholder="Username" %}
