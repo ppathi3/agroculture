@@ -91,11 +91,21 @@
   .form-style-1 .required{
   	color:red;
   }
+  body{
+    background-image: url("static/images/background_img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+    .alert-success {
+    color: black !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
 </style>
 
 </head>
 
-<body style="background-color: #B3E5FC;">
+<body>
 
   {%if request.user.is_authenticated%}
     {% include "ecom/customer_navbar.html" %}
