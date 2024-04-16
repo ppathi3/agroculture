@@ -13,7 +13,9 @@
       position: fixed;
     }
     body {
-    background-color: #ebe0e0; /* Light gray background */
+      background-image: url("static/images/background_img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
 #navbar {
@@ -170,6 +172,16 @@
 .menu {
     cursor: pointer;
 }
+
+#team {
+    font-size: 30px;
+    display: block;
+    color: #fcf8e3;
+    border: 1px solid;
+    width: 100%;
+    border-radius: 50px;
+    background: repeating-linear-gradient(118deg, black, transparent 100px);
+}
   </style>
 </head>
 
@@ -180,7 +192,7 @@
     {% include "ecom/navbar.html" %}
   {%endif%}
   <br><br><br>
-<h1 style="text-align:center;"><b>Agroculture <br><br><h2>Code Stormers<br><br>
+<h1 style="text-align:center;"><b>Agroculture <br><br><h2 id="team">Code Stormers<br><br>
   <br>Narayana Datta Jupalli- 801362272
   <br>Satya Datta Jupalli- 801362268
   <br>Sudhish Cherukuri - 801366050
