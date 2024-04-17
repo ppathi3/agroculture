@@ -72,8 +72,13 @@
     .add-to-cart:hover {
         background-color: #e67e22;
     }
+    body {
+      background-image: url("static/images/background_img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 </style>
-
+<body>
 {% if products %}
 <div class="row">
     {% for p in products %}
@@ -103,3 +108,4 @@
 </script>
 
 {% endblock content %}
+</body>

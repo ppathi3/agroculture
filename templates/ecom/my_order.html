@@ -157,10 +157,15 @@ p {
     border-color: #ff2b00;
     border-radius: 1px
 }
-
+body {
+      background-image: url("static/images/background_img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 </style>
+<body>
 <br>
-<h3 style="text-align:center;">Thank You For Your Order  <strong>{{request.user}}</strong> !</h3> <br><br>
+<h3 style="text-align:center;background: aliceblue;">Thank You For Your Order  <strong>{{request.user}}</strong> !</h3> <br><br>
 <div class="container">
     <header class="card-header" style="text-align:center;"> My Orders / Tracking </header>
 
@@ -222,3 +227,4 @@ p {
 </div>
 <br><br><br><br><br>
 {% endblock content %}
+</body>
