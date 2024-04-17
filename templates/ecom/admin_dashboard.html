@@ -1,11 +1,20 @@
 {% extends 'ecom/admin_base.html' %}
 {% load static %}
 {% block content %}
+<style>
+      body {
+      background-image: url("static/images/background_img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+</style>
+<body>
 <br>
 {%include 'ecom/admin_dashboard_cards.html'%}
 <br><br><br><br><br>
-
-<hr><hr>
+<div>
+  <br> <br>
+</div>
 <div class="container" >
 
     <div class="panel panel-primary" >
@@ -60,3 +69,4 @@
 
 
 {% endblock content %}
+</body>

@@ -9,7 +9,7 @@
       margin-left: 25%;
       margin-right: 25%;
       padding: 20px;
-      background-color: #f44336;
+      background-color: #17a2b8;
       color: white;
     }
 
@@ -31,6 +31,11 @@
     .closebtn:hover {
       color: black;
     }
+    body{
+    background-image: url("static/images/background_img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   </style>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -38,10 +43,10 @@
 <!--
 written By : codestormers
 -->
-
+<body>
 <br><br><br><br>
-<h2 style="text-align:center; color:blue;">Feedbacks By User</h2>
-<hr>
+<h2 style="text-align:center; color:blue;background-color: aliceblue;">Feedbacks By User</h2>
+<div><br><br></div>
 {%for f in feedbacks%}
 <div class="alert">
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -52,3 +57,4 @@ written By : codestormers
 developed By : codestormers
 -->
 {% endblock content %}
+</body>

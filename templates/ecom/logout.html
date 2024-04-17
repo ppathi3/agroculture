@@ -1,6 +1,14 @@
 {% extends 'ecom/homebase.html' %}
 {% load static %}
 {% block content %}
+<style>
+    body {
+      background-image: url("static/images/background_img.png") !important;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+</style>
+<body>
 <br><br><br>
 <img src="{% static "images/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;">
 
@@ -13,3 +21,4 @@ developed By : codestormers
 -->
 
 {% endblock content %}
+</body>

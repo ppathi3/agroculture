@@ -87,7 +87,13 @@ select{
 .form-style-1 .required{
 	color:red;
 }
+body {
+      background-image: url("static/images/background_img.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 </style>
+<body>
 {%if product_in_cart%}
 <form method="post">
   {% csrf_token %}
@@ -119,3 +125,4 @@ select{
 {%endif%}
 
 {% endblock content %}
+</body>
